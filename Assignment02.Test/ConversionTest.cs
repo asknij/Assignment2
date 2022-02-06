@@ -15,20 +15,26 @@ namespace Assignment02.Test
         [Test]
         public void ConvertCelciusToFahrenheitTestMethod1()
         {
-            conversion = new Conversion(12);
-            var result = conversion.ConvertCelciusToFahrenheit();
-            Assert.AreEqual(53.6, result);
+            var userInput = 12;
+            var expected = 53.6;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertCelciusToFahrenheit();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
         public void ConvertCelciusToFahrenheitTestMethod2()
         {
-            conversion = new Conversion(-20);
+            var userInput = -20;
+            var expected = -4;
+            conversion = new Conversion(userInput);
             var result = conversion.ConvertCelciusToFahrenheit();
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(expected, result);
         }
         [Test]
         public void ConvertCelciusToFahrenheitTestMethod3()
         {
+            var userInput = 0;
+            var expected = 32;
             conversion = new Conversion(0);
             var result = conversion.ConvertCelciusToFahrenheit();
             Assert.AreEqual(32, result);
@@ -36,6 +42,8 @@ namespace Assignment02.Test
         [Test]
         public void ConvertCelciusToKelvinTestMethod1()
         {
+            var userInput = 12;
+            var expected = 53.6;
             conversion = new Conversion(10);
             var result = conversion.ConvertCelciusToKelvin();
             Assert.AreEqual(283.15, result);

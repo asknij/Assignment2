@@ -22,7 +22,6 @@ namespace Assignment2
 
         public double ConvertCelciusToFahrenheit()
         {
-
             return ((temperature * (9.00 / 5.00)) + 32.00);
         }
         public double ConvertCelciusToKelvin()
