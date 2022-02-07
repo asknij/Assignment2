@@ -1,48 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2
 {
     public class Conversion
     {
-        private int temperature;
+        private double temperature;
+        //Default Constructor
         public Conversion()
         {
             temperature = 1;
         }
+        //Parameterized Constructor
         public Conversion(int a)
         {
             temperature = a;
         }
 
-
-
+        /// <summary>
+        /// Converts Celcius to Fahrenheit
+        /// </summary>
+        /// <returns></returns>
         public double ConvertCelciusToFahrenheit()
         {
-            return ((temperature * (9.00 / 5.00)) + 32.00);
+            return Math.Round(((temperature * (9.00 / 5.00)) + 32.00), 2);
         }
+
+        /// <summary>
+        /// Converts Celcius to Kelvin
+        /// </summary> 
+        /// <returns></returns>
         public double ConvertCelciusToKelvin()
         {
-            return (temperature + 273.15);
+            return Math.Round(((temperature + 273.15)), 2);
         }
+
+        /// <summary>
+        /// Converts Kelvin to Fahrenheit
+        /// </summary> 
+        /// <returns></returns>
         public double ConvertKelvinToFahrenheit()
         {
-            return (((temperature - 273.15) * (9.00 / 5.00)) + 32.00);
+            return Math.Round(((((temperature - 273.15) * (9.00 / 5.00)) + 32.00)), 2);
         }
+
+        /// <summary>
+        /// Converts Kelvin to Celcius
+        /// </summary> 
+        /// <returns></returns>
         public double ConvertKelvinToCelsius()
         {
-            return ((temperature - 273.15));
+            return Math.Round((((temperature - 273.15))), 2);
         }
+
+        /// <summary>
+        /// Converts Fahrenheit to Kelvin
+        /// </summary> 
+        /// <returns></returns>
         public double ConvertFahrenheitToKelvin()
         {
-            return (((temperature - 32.00) * (5.00 / 9.00)) + 273.15);
+            return Math.Round(((((temperature - 32.00) * (5.00 / 9.00)) + 273.15)), 2);
         }
+
+        /// <summary>
+        /// Converts Fahrenheit to Celsius
+        /// </summary> 
+        /// <returns></returns>
         public double ConvertFahrenheitToCelsius()
         {
-            return ((temperature - 32.00) * (5.00 / 9.00));
+            return Math.Round((((temperature - 32.00) * (5.00 / 9.00))),2);
         }
 
 
