@@ -4,8 +4,13 @@ namespace Assignment2
 {
     class Program
     {
+        /// <summary>
+        /// Main function which accepts user input
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
+            //intializing temperature
             int temperature = 1, flag = 0, choice;
             Conversion temp;
             bool end = true;

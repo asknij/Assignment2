@@ -13,7 +13,7 @@ namespace Assignment02.Test
             conversion = new Conversion();
         }
         [Test]
-        public void ConvertCelciusToFahrenheitTestMethod1()
+        public void ConvertCelciusToFahrenheitTestPositiveInteger()
         {
             var userInput = 12;
             var expected = 53.6;
@@ -22,66 +22,76 @@ namespace Assignment02.Test
             Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertCelciusToFahrenheitTestMethod2()
+        public void ConvertCelciusToFahrenheitTestNegativeInteger()
         {
-            var userInput = -20;
-            var expected = -4;
+            var userInput = -10;
+            var expected = 14;
             conversion = new Conversion(userInput);
-            var result = conversion.ConvertCelciusToFahrenheit();
-            Assert.AreEqual(expected, result);
+            var actual = conversion.ConvertCelciusToFahrenheit();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertCelciusToFahrenheitTestMethod3()
+        public void ConvertCelciusToFahrenheitTestZeroInput()
         {
             var userInput = 0;
             var expected = 32;
-            conversion = new Conversion(0);
-            var result = conversion.ConvertCelciusToFahrenheit();
-            Assert.AreEqual(32, result);
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertCelciusToFahrenheit();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertCelciusToKelvinTestMethod1()
+        public void ConvertCelciusToKelvinTestPositiveInteger()
         {
             var userInput = 12;
-            var expected = 53.6;
-            conversion = new Conversion(10);
-            var result = conversion.ConvertCelciusToKelvin();
-            Assert.AreEqual(283.15, result);
+            var expected = 285.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertCelciusToKelvin();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertCelciusToKelvinTestMethod2()
+        public void ConvertCelciusToKelvinTestNegativeInteger()
         {
-            conversion = new Conversion(-10);
-            var result = conversion.ConvertCelciusToKelvin();
-            Assert.AreEqual(263.15, result);
+            var userInput = -10;
+            var expected = 263.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertCelciusToKelvin();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertCelciusToKelvinTestMethod3()
+        public void ConvertCelciusToKelvinTestZeroInput()
         {
-            conversion = new Conversion(0);
-            var result = conversion.ConvertCelciusToKelvin();
-            Assert.AreEqual(273.15, result);
+            var userInput = 0;
+            var expected = 273.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertCelciusToKelvin();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertFahrenheitToCelsiusTestMethod1()
+        public void ConvertFahrenheitToCelsiusTestPositiveInteger()
         {
-            conversion = new Conversion(12);
-            var result = conversion.ConvertFahrenheitToCelsius();
-            Assert.AreEqual(53.6, result);
+            var userInput = 12;
+            var expected = -11.11;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToCelsius();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertFahrenheitToCelsiusTestMethod2()
+        public void ConvertFahrenheitToCelsiusTestNegativeInteger()
         {
-            conversion = new Conversion(-20);
-            var result = conversion.ConvertFahrenheitToCelsius();
-            Assert.AreEqual(4, result);
+            var userInput = -10;
+            var expected = -23.33;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToCelsius();
+            Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void ConvertFahrenheitToCelsiusTestMethod3()
+        public void ConvertFahrenheitToCelsiusTestZeroInput()
         {
-            conversion = new Conversion(0);
-            var result = conversion.ConvertFahrenheitToCelsius();
-            Assert.AreEqual(32, result);
+            var userInput = 0;
+            var expected = -17.78;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToCelsius();
+            Assert.AreEqual(expected, actual);
         }
     }
 }
