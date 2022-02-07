@@ -93,5 +93,87 @@ namespace Assignment02.Test
             var actual = conversion.ConvertFahrenheitToCelsius();
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void ConvertFahrenheitToKelvinTestPositiveInteger()
+        {
+            var userInput = 12;
+            var expected = 262.04;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToKelvin();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertFahrenheitToKelvinTestNegativeInteger()
+        {
+            var userInput = -10;
+            var expected = 249.82;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToKelvin();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertFahrenheitToKelvinTestZeroInput()
+        {
+            var userInput = 0;
+            var expected = 255.37;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertFahrenheitToKelvin();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToCelsiusTestPositiveInteger()
+        {
+            var userInput = 12;
+            var expected = -261.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToCelsius();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToCelsiusTestNegativeInteger()
+        {
+            var userInput = -10;
+            var expected = -283.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToCelsius();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToCelsiusTestZeroInput()
+        {
+            var userInput = 0;
+            var expected = -273.15;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToCelsius();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToFahrenheitTestPositiveInteger()
+        {
+            var userInput = 12;
+            var expected = -438.07;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToFahrenheit();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToFahrenheitTestNegativeInteger()
+        {
+            var userInput = -10;
+            var expected = -477.67;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToFahrenheit();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void ConvertKelvinToFahrenheitTestZeroInput()
+        {
+            var userInput = 0;
+            var expected = -459.67;
+            conversion = new Conversion(userInput);
+            var actual = conversion.ConvertKelvinToFahrenheit();
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
