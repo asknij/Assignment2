@@ -4,7 +4,7 @@ namespace Assignment2
 {
     public class Conversion
     {
-        private double temperature;
+        private int temperature;
         //Default Constructor
         public Conversion()
         {
@@ -69,9 +69,5 @@ namespace Assignment2
         {
             return Math.Round((((temperature - 32.00) * (5.00 / 9.00))),2);
         }
-
-
-
-
     }
 }
